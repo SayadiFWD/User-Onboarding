@@ -106,7 +106,7 @@ function Form() {
           onChange={inputChange}
         />
          {errors.name.length > 0 ? (
-          <p className="error">{errors.name}</p>
+          <p className="errors">{errors.name}</p>
         ) : null}
       </label>
       <br />
@@ -152,6 +152,7 @@ function Form() {
         ) : null} */}
       </label>
       <br />
+      <pre>{JSON.stringify(post,null,2)}</pre>
       <button type="submit" disabled={isButtonDisabled}>
         Submit
       </button>
